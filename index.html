@@ -64,7 +64,7 @@
   function checkGuess() {
 
     let userGuess = guessField.value;
-    if (userGuess > 0 && userGuess <101){
+    if (userGuess > 0 && userGuess <101 && userGuess%1==0){
       if(guessCount === 1 ) {
       guesses.textContent = 'Número aleatorio anterior: ';
     }
@@ -98,8 +98,8 @@
   guessField.focus();
     }
     else{
-      lastResult.textContent = 'Ingrese un numero entre 1 y 100';
-      lastResult.style.backgroundColor = 'red';
+      alert('Ingrese un numero entre 1 y 100 que no sea decimal');
+      
       setGameOver()
     }
   }
